@@ -10,7 +10,7 @@ pd.set_option('display.width', 2000)
 pd.set_option('display.max_colwidth',1000)
 
 #数据获取与预处理
-def get_marketdata(url):
+def get_marketdata(url, path):
     def get_sell_price(item_name):
         url = 'https://evepraisal.com/appraisal.json?market=jita'
         data = str(item_name)
@@ -84,7 +84,7 @@ def get_marketdata(url):
     print(lpmarket)
     # 保存市场行情
     writer = pd.ExcelWriter(
-        'market_data/{}.xlsx'.format(time.strftime("%Y-%m-%d_%H%M%S", time.localtime())))
+        'market_data/{}/{}.xlsx'.format(path, time.strftime("%Y-%m-%d_%H%M%S", time.localtime())))
     lpmarket.to_excel(writer, 'Sheet1')
     writer.save()
     return lpmarket
@@ -223,9 +223,13 @@ def trade_aide(marketdata, orderplan, lpprice):
         #打印剩余的订单计划
 
 # 天蛇
-marketdata = get_marketdata("https://www.fuzzwork.co.uk/lpstore/buy/10000002/1000135")
+marketdata = get_marketdata("https://www.fuzzwork.co.uk/lpstore/buy/10000002/1000135", "Serpentis")
 # 天使
-#marketdata = get_marketdata("https://www.fuzzwork.co.uk/lpstore/sell/10000002/1000124")
+marketdata = get_marketdata("https://www.fuzzwork.co.uk/lpstore/buy/10000002/1000124", "Archangels")
+# C海军
+marketdata = get_marketdata("https://www.fuzzwork.co.uk/lpstore/buy/10000002/1000035", "CaldariNavy")
+# 古斯塔斯
+marketdata = get_marketdata("https://www.fuzzwork.co.uk/lpstore/buy/10000002/1000127", "Guristas")
 
 #marketdata = get_marketdata_from_file('2020-03-21_105200.xlsx')
 
