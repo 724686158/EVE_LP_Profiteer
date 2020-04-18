@@ -10,3 +10,7 @@ https://www.bilibili.com/video/BV1xE4113758
 从零开始的天蛇奸商[3]：数据存储
 https://www.bilibili.com/video/BV1RE411c7jH
 
+从零开始的天蛇奸商[4]：定时提供市场数据的服务
+https://www.bilibili.com/video/BV1JT4y1G7xq
+
+
