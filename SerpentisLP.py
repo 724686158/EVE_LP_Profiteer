@@ -230,6 +230,10 @@ marketdata = get_marketdata("https://www.fuzzwork.co.uk/lpstore/buy/10000002/100
 marketdata = get_marketdata("https://www.fuzzwork.co.uk/lpstore/buy/10000002/1000035", "CaldariNavy")
 # 古斯塔斯
 marketdata = get_marketdata("https://www.fuzzwork.co.uk/lpstore/buy/10000002/1000127", "Guristas")
+# 古斯塔斯
+marketdata = get_marketdata("https://www.fuzzwork.co.uk/lpstore/buy/10000002/1000127", "Guristas")
+# 血袭者
+marketdata = get_marketdata("https://www.fuzzwork.co.uk/lpstore/buy/10000002/1000134", "BloodRaiders")
 
 #marketdata = get_marketdata_from_file('2020-03-21_105200.xlsx')
 
@@ -243,6 +247,7 @@ marketdata = get_marketdata("https://www.fuzzwork.co.uk/lpstore/buy/10000002/100
 # # order_plan_swap['Qty'] = order_plan['5% Volume']
 # # order_plan = order_plan_swap
 # trade_aide(marketdata, order_plan, 2700)
+
 
 
 
